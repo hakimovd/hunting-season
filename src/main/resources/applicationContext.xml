@@ -7,27 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="com.hakimov.hunting"/>
 
-    <bean id="gosseBean"
-          class="com.hakimov.hunting.Gosse">
-        <constructor-arg value="Gosse"></constructor-arg>
-    </bean>
-
-    <bean id="goatBean"
-          class="com.hakimov.hunting.Goat">
-        <constructor-arg value="Goat"></constructor-arg>
-
-    </bean>
-
-    <bean id="frogBean"
-          class="com.hakimov.hunting.Frog">
-        <constructor-arg value="Frog"></constructor-arg>
-    </bean>
-
-    <bean id="hunterBean"
-          class="com.hakimov.hunting.Hunter">
-        <property name="currentAnimal" ref="goatBean"/>
-    </bean>
-
+    <context:property-placeholder location="classpath:animal.properties"/>
 
 </beans>

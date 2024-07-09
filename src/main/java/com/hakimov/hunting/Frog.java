@@ -1,8 +1,12 @@
 package com.hakimov.hunting;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("Frog")
 public class Frog extends Animal {
 
-    public Frog(String name){
+    public Frog(@Value("${frog.name}")String name){
         this.name = name;
     }
 

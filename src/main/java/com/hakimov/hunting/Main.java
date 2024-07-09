@@ -8,7 +8,7 @@ public class Main {
                 "applicationContext.xml"
         );
 
-        Hunter hunter = context.getBean("hunterBean", Hunter.class);
+        Hunter hunter = context.getBean("hunter", Hunter.class);
 
         hunter.killAnimal();
 
