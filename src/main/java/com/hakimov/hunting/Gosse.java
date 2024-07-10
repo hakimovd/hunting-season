@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 @Component("gosse")
 public class Gosse extends Animal{
 
-
     public Gosse(@Value("${gosse.name}")String name){
         this.name = name;
     }
